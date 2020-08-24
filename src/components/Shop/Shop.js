@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import fakeData from '../../fakeData'
 import './Shop.css'
 import Product from '../Products/Product';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
     const first10Data = fakeData.slice(0,10)
@@ -27,7 +28,7 @@ const Shop = () => {
            </div>
 
            <div className="cart-container">
-               <h3>order Summary: {cart.length}</h3>
+              <Cart cart={cart}></Cart>
            </div>
             
         </div>
